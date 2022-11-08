@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="13d24d50-4927-47fe-bf67-f06d53444869" activeEnvironment="Default" name="REST Project 1" soapui-version="5.7.0" encryptionMode="Not encrypted" updated="3.40.2 2022-07-27T09:18:31Z" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="804a420b-2e5c-46a3-aaa9-11b3b74ef625" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://216.10.245.166" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    
+    <con:definitionCache type="TEXT" rootPart=""/><con:endpoints>
+      <con:endpoint>http://216.10.245.166</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Addbook.php" path="/Library/Addbook.php" id="82cce64b-c61e-4c3f-9a85-b21a0ba9a5f6">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method 1" id="fad68d3e-caa4-41fd-bd41-8dc360fa4e18" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element xmlns:add="http://216.10.245.166/Library/Addbook.php">add:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:add="http://216.10.245.166/Library/Addbook.php">add:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="1b6abddd-af06-42d0-a9bb-1e8083c022fa" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://216.10.245.166</con:endpoint>
+          <con:request>{
+
+"name":"Learn API Automation with Java",
+"isbn":"bcde",
+"aisle":"256",
+"author":"Lakshmi"
+}</con:request>
+          <con:originalUri>http://216.10.245.166/Library/Addbook.php</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="GetBook.php" path="/Library/GetBook.php" id="b39019ea-095a-49fb-ba49-d05161f9cae4">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>AuthorName</con:name>
+          <con:value>Lakshmi</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>Lakshmi</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method 1" id="136ad4a6-5a9f-41a0-b057-d6af9b364bb3" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="260b3bb9-62d2-4f1e-9ab0-5fef27ae562f" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://216.10.245.166</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://216.10.245.166/Library/GetBook.php</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="GetBook.php" path="/Library/GetBook.php" id="916a892f-9c96-474d-ad6f-fdca36697873">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>ID</con:name>
+          <con:value>3389</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>3389</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method 1" id="47ef0e44-83c1-4dd7-bd29-bb2c265fbbb4" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="98c2a9ad-3b84-4902-9480-1d45baa66227" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://216.10.245.166</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://216.10.245.166/Library/GetBook.php</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="ID" value="bcde256" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="DeleteBook.php" path="/Library/DeleteBook.php" id="d4fb7507-ecb2-40bf-9630-ee774ae3b9e5">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method 1" id="45e37f8f-cb97-402a-ad34-199bc1ac55c7" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:del="http://216.10.245.166/Library/DeleteBook.php">del:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="56cc0e18-a7a1-41d5-9305-f1a902aa2641" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://216.10.245.166</con:endpoint>
+          <con:request>{
+ 
+"ID" : "bcde256"
+ 
+}</con:request>
+          <con:originalUri>http://216.10.245.166/Library/DeleteBook.php</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="0dc1810b-09bd-4a44-87cb-d98808fd7272" name="Library">
+    <con:description>TestSuite generated for REST Service [http://216.10.245.166]</con:description>
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="686d9e48-ea03-4c0e-b234-2fb4301b9a75" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="AddbookTestCase" searchProperties="true">
+      <con:description>TestCase generated for REST Resource [Addbook.php] located at [/Library/Addbook.php]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="Request 1" id="08fea3c0-f516-4920-b7b5-678d07e350e3">
+        <con:settings/>
+        <con:config service="http://216.10.245.166" resourcePath="/Library/Addbook.php" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="1b6abddd-af06-42d0-a9bb-1e8083c022fa" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>${#TestSuite#endpoint}</con:endpoint>
+            <con:request>{
+
+"name":"Learn API Automation with Selenium appium",
+"isbn":"reya2",
+"aisle":"405",
+"author":"${#TestSuite#author}"
+}</con:request>
+            <con:originalUri>http://216.10.245.166/Library/Addbook.php</con:originalUri>
+            <con:assertion type="Simple Contains" id="48f0f95a-e141-4e8b-b1b7-62fb087e9e1d" name="Contains">
+              <con:configuration>
+                <token>successfully added</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="Property Transfer" id="0af002fe-f5f9-45f9-8783-fcf668a67f19">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>id</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Request 1</con:sourceStep>
+            <con:sourcePath>ID</con:sourcePath>
+            <con:targetType>id</con:targetType>
+            <con:targetStep>#TestSuite#</con:targetStep>
+            <con:type>JSONPATH</con:type>
+            <con:targetTransferType>JSONPATH</con:targetTransferType>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="Groovy Script" id="a3023103-f154-48f9-a138-7b19c980f28b"><con:settings/><con:config><script>def i=1..9
+log.info i.getTo()</script></con:config></con:testStep><con:properties>
+        <con:property>
+          <con:name>AuthorName</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="bf8083e1-4956-4a13-b375-2743a3cf72a3" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetBookbyAuthorTestCase" searchProperties="true">
+      <con:description>TestCase generated for REST Resource [GetBook.php] located at [/Library/GetBook.php]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="Request 1" id="4b899401-f331-4f2f-81ea-61a05a9d1875">
+        <con:settings/>
+        <con:config service="http://216.10.245.166" resourcePath="/Library/GetBook.php" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="260b3bb9-62d2-4f1e-9ab0-5fef27ae562f" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>${#TestSuite#endpoint}</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://216.10.245.166/Library/GetBook.php</con:originalUri>
+            <con:assertion type="GroovyScriptAssertion" id="0395af96-7fcc-4a60-913a-9a6f6210c7f0" name="Script Assertion">
+              <con:configuration>
+                <scriptText>import groovy.json.JsonSlurper
+boolean flag;
+def response = messageExchange.response.responseContent
+def json1 = new JsonSlurper().parseText(response)
+
+for(int i=0;i&lt;=34;i++)
+{
+	if(json1.isbn[i] == "laks")
+	{
+		flag = true;
+	}
+}
+assert true==flag</scriptText>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="AuthorName" value="${#TestSuite#author}"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="9037b4de-6cca-4b65-996c-9805530ad0d1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetBookbyIDTestCase" searchProperties="true">
+      <con:description>TestCase generated for REST Resource [GetBook.php] located at [/Library/GetBook.php]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="Request 1" id="744de6a8-0d5b-42b9-af83-05756174f9a0">
+        <con:settings/>
+        <con:config service="http://216.10.245.166" resourcePath="/Library/GetBook.php" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="98c2a9ad-3b84-4902-9480-1d45baa66227" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>${#TestSuite#endpoint}</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://216.10.245.166/Library/GetBook.php</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="ID" value="bcde256" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="ed87eb65-f1d5-4b2e-b1b4-89a4bd6ad999" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="DeleteBookTestCase" searchProperties="true">
+      <con:description>TestCase generated for REST Resource [DeleteBook.php] located at [/Library/DeleteBook.php]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="Request 1" id="2a7665e0-f226-417e-8ebd-936862d1087f">
+        <con:settings/>
+        <con:config service="http://216.10.245.166" resourcePath="/Library/DeleteBook.php" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="56cc0e18-a7a1-41d5-9305-f1a902aa2641" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>${#TestSuite#endpoint}</con:endpoint>
+            <con:request>{
+ 
+"ID" : '$(#TestSuite#id)'
+ 
+}</con:request>
+            <con:originalUri>http://216.10.245.166/Library/DeleteBook.php</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties>
+      <con:property>
+        <con:name>endpoint</con:name>
+        <con:value>http://216.10.245.166</con:value>
+      </con:property>
+      <con:property>
+        <con:name>author</con:name>
+        <con:value>Jeeva</con:value>
+      </con:property>
+      <con:property>
+        <con:name>id</con:name>
+        <con:value>reya400</con:value>
+      </con:property>
+    </con:properties>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
