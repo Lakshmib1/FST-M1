@@ -1,49 +1,53 @@
-package junit.alchemy.junit;
-import java.util.ArrayList;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+package junit.alchemy.activities;
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Activity1 {
+	private static ChromeDriver driver;
 
-	// Test fixtures
-    static ArrayList<String> list;
- 
-    // Initialize test fixtures before each test method
-    @BeforeEach
-    void setUp() throws Exception {
-        list = new ArrayList<String>();
-        list.add("alpha"); // at index 0
-        list.add("beta"); // at index 1
+//WebDriverManager.chromedriver().setup();
+
+    
+    @BeforeMethod
+    public void beforeMethod() {
+        //Create a new instance of the Firefox driver
+        WebDriverManager.chromedriver().setup();
+    	driver = new ChromeDriver();
+        
+        //Open browser
+        driver.get("https://www.training-support.net");
     }
  
-    // Test method to test the insert operation
     @Test
-    public void insertTest() {
-        // Assertion for size
-        assertEquals(2, list.size(), "Wrong size");
-        // Add new element
-        list.add(2, "charlie");
-        // Assert with new elements
-        assertEquals(3, list.size(), "Wrong size");
- 
-        // Assert individual elements
-        assertEquals("alpha", list.get(0), "Wrong element");
-        assertEquals("beta", list.get(1), "Wrong element");
-        assertEquals("charlie", list.get(2), "Wrong element");
+    public void exampleTestCase() {
+        // Check the title of the page
+        String title = driver.getTitle();
+            
+        //Print the title of the page
+        System.out.println("Page title is: " + title);
+            
+            //Assertion for page title
+        Assert.assertEquals("Training Support", title);
+                    
+        //Find the clickable link on the page and click it
+        driver.findElement(By.id("about-link")).click();
+                    
+        //Print title of new page
+        System.out.println("New page title is: " + driver.getTitle());
+        
+        Assert.assertEquals(driver.getTitle(), "About Training Support");
     }
  
-    // Test method to test the replace operation
-    @Test
-    public void replaceTest() {
-        // Replace new element
-        list.set(1, "charlie");
- 
-        // Assert size of list
-        System.out.println(list.size());
-        assertEquals(2, list.size(), "Wrong size");
-        // Assert individual elements
-        assertEquals("alpha", list.get(0), "Wrong element");
-        assertEquals("charlie", list.get(1), "Wrong element");
+    @AfterMethod
+    public void afterMethod() {
+        //Close the browser
+        driver.quit();
     }
+ 
 }
