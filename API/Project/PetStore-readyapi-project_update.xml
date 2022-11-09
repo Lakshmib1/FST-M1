@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">
+   <soap:Header/>
+   <soap:Body>
+      <typ:addEmployee>
+         <!--Optional:-->
+         <typ:name>${#TestCase#Name}</typ:name>
+         <!--Optional:-->
+         <typ:id>${#TestSuite#id}</typ:id>
+         <!--Optional:-->
+         <typ:Department>${#TestSuite#Department}</typ:Department>
+         <!--Optional:-->
+         <typ:age>${#TestCase#Age}</typ:age>
+      </typ:addEmployee>
+   </soap:Body>
+</soap:Envelope>
